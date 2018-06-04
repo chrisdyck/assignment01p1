@@ -1,0 +1,35 @@
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active">
+                <a href="#">Active</a>
+            </li>
+            <li>
+                <a href="#">Family</a>
+                 <% console.log(Model); %>
+                    <% var data = Model.FamilyMembers; %> 
+
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <% for(var i = 0; i < data.length; i++) { %>
+                                    <% if(data[i].Name != 'Not Found'){%>
+                                        <li>
+                                            <a href="/family?name=<%=data[i].Name %>">
+                                                <%= data[i].Name + " (" + data[i].Relationship + ")" %>
+                                            </a>
+                                        </li>
+
+                                        <% } %>
+                                            <% } %>
+
+                            </ul>
+                        </div>
+            </li>
+            <li>
+                <a href="#">Item</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

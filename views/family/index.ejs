@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+    <body>
+        <% include ../partials/navbar %>
+
+            <div class="uk-container">
+                <h1>
+                    <%= title %>
+                </h1>
+                <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+                    <% var data = Model.FamilyMembers; %>
+                    <% for(var i = 0; i < data.length; i++) { %>
+                        <% if(data[i].Name != 'Not Found'){%>
+                            <a href="/family?name=<%=data[i].Name %>">
+                                <div>
+                                    <div class="uk-card uk-card-default uk-card-body">
+                                        <h3 class="uk-card-title">
+                                            <%= data[i].Name + " (" + data[i].Relationship + ")" %>
+                                        </h3>
+                                        <p>
+                                            <%= data[i].Description %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+    </body>
+
+    </html>
