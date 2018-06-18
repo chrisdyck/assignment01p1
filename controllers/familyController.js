@@ -6,9 +6,16 @@ const DataContext = require('../models/DataContext');
 
 
 exports.index = (req, res, next) => {
+    
+        res.render('family/index', { title: 'Family Members', Model: 
+            { FamilyMembers: DataContext.FamilyMembers } });
+};
+
+
+exports.detail = (req, res, next) => {
     const queryString = url.parse(req.url, true).query;
 
-    const { name } = queryString;
+    const { name } = req.params.name; // queryString;
 
     console.log(name);
     if (name !== null && name !== undefined) {
@@ -23,10 +30,8 @@ exports.index = (req, res, next) => {
             Model: 
                 { FamilyMembers: DataContext.FamilyMembers, FamilyMember: item } });
     }
-    else {
-        res.render('family/index', { title: 'Family Members', Model: 
-            { FamilyMembers: DataContext.FamilyMembers } });
-    }
+    // else {
+    //     res.render('family/index', { title: 'Family Members', Model: 
+    //         { FamilyMembers: DataContext.FamilyMembers } });
+    // }
 };
-
-

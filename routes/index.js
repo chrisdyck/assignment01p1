@@ -1,7 +1,6 @@
 var express = require('express');
 
 const indexController = require('../controllers/indexController');
-const familyController = require('../controllers/familyController');
 
 var router = express.Router();
 
@@ -10,9 +9,10 @@ var router = express.Router();
 //   res.render('index', { title: 'Express' });
 // });
 
-// router.get(['/', '/index', '/home'], indexController.homePage);
 router.get('/', indexController.index);
-router.get('/family', familyController.index);
+router.get('/index', indexController.index);
+router.get('/index/contact', indexController.contact);
+router.get('/contact', indexController.contact);
 
 
 module.exports = router;
