@@ -1,25 +1,32 @@
+<!--
+  family/Index.ejs
+  Author: Chris Dyck
+  Website: My Portfolio
+  File Description: Displays Family route home page content
+-->
+
 <% include ../partials/header %>
 
-                <h1>
-                    <%= title %>
-                </h1>
-                <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-                    <% var data = Model.FamilyMembers; %>
-                    <% for(var i = 0; i < data.length; i++) { %>
-                        <% if(data[i].Name != 'Not Found'){%>
-                            <div>
-                                <a href="/family/<%= data[i].Name %>">
-                                    <div class="uk-card uk-card-default uk-card-body">
-                                        <h3 class="uk-card-title">
-                                            <%= data[i].Name + " (" + data[i].Relationship + ")" %>
-                                        </h3>
-                                        <p>
-                                            <%= data[i].Description %>
-                                        </p>
-                                    </div>
-                                </a>
+    <h1>
+        <%= title %>
+    </h1>
+    <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+        <% var data = Model.FamilyMembers; %>
+            <% for(var i = 0; i < data.length; i++) { %>
+                <% if(data[i].Name != 'Not Found'){%>
+                    <div>
+                        <a href="/family/<%= data[i].Name %>">
+                            <div class="uk-card uk-card-default uk-card-body">
+                                <h3 class="uk-card-title">
+                                    <%= data[i].Name + " (" + data[i].Relationship + ")" %>
+                                </h3>
+                                <p>
+                                    <%= data[i].Description %>
+                                </p>
                             </div>
-                        <% } %>
+                        </a>
+                    </div>
                     <% } %>
-                </div>
-            <% include ../partials/footer %>
+                        <% } %>
+    </div>
+    <% include ../partials/footer %>

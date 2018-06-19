@@ -1,16 +1,23 @@
+<!--
+  family/detail.ejs
+  Author: Chris Dyck
+  Website: My Portfolio
+  File Description: Displays Family route details content for one Family member
+-->
+
 <% include ../partials/header %>
 
-        <h1>
-            <%= Model.FamilyMember.Name %>
-        </h1>
-        <h3 class="uk-card-title">About
-            <%= Model.FamilyMember.Name %>,
-                <%= Model.FamilyMember.Relationship %>
-        </h3>
-        <p>
-        </p>
-        <p>
-            <%= Model.FamilyMember.Description %>
-        </p>
+    <h1>
+        <%= Model.FamilyMember.Name %>
+    </h1>
+    <h3 class="uk-card-title">About
+        <%= Model.FamilyMember.Name %>,
+            <%= Model.FamilyMember.Relationship %>
+    </h3>
+    <p>
+    </p>
+    <p>
+        <%= Model.FamilyMember.Description %>
+    </p>
 
-    <% include ../partials/footer %>
+<% include ../partials/footer %>

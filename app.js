@@ -22,9 +22,10 @@ var indexRouter = require('./routes/index');
 var familyRouter = require('./routes/family');
 
 app.use('/', indexRouter);
+app.use('/family', familyRouter);
 app.use('/contact', indexRouter);
 app.use('/home', indexRouter);
-app.use('/family', familyRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
