@@ -24,8 +24,18 @@ var familyRouter = require('./routes/family');
 app.use('/', indexRouter);
 app.use('/family', familyRouter);
 app.use('/contact', indexRouter);
+app.use('/contactPost', indexRouter);
 app.use('/home', indexRouter);
 
+// app.post('/contactPost', urlencodedParser, function (req, res) {
+//   // Prepare output in JSON format
+//   response = {
+//      name:req.body.Name,
+//      email:req.body.Email
+//   };
+//   console.log(response);
+//   res.end(JSON.stringify(response));
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

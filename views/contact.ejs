@@ -24,15 +24,57 @@
                 <div class="uk-panel">
                     <h2>Find me here!</h2>
                     <% include partials/socialicons %>
+                        <h2>My Career</h2>
+                        <p>
+                            <a href="http://nuvolaresume.azurewebsites.net/Resumes/Details?guid=7e13b83a-0d4e-4653-8706-87886bdfbc8d" target="_blank">
+                                <img src="../images/nuvolaresumeicon.png" width="35" alt="NuvolaResume" /> NuvolaResume as Director of Architecture or IT Director</a>
+                        </p>
+                        <form action="/contact" method = "POST">
+                            <fieldset class="uk-fieldset">
 
+                                <legend class="uk-legend">Contact me now</legend>
+
+                                <div class="uk-margin">
+                                    <input class="uk-input" type="text" placeholder="Your name" name="Name">
+                                </div>
+
+                                <div class="uk-margin">
+                                    <input class="uk-input" type="text" placeholder="Email Address" name="Email" >
+                                </div>
+
+                                <!-- <div class="uk-margin">
+                                    <select class="uk-select">
+                                        <option>Option 01</option>
+                                        <option>Option 02</option>
+                                    </select>
+                                </div> -->
+
+                                <div class="uk-margin">
+                                    <textarea class="uk-textarea" rows="5" placeholder="Tell me about yourself"></textarea>
+                                </div>
+
+                                <!-- <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                    <label>
+                                        <input class="uk-radio" type="radio" name="radio2" checked> A</label>
+                                    <label>
+                                        <input class="uk-radio" type="radio" name="radio2"> B</label>
+                                </div> -->
+
+                                <!-- <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                    <label>
+                                        <input class="uk-checkbox" type="checkbox" checked> A</label>
+                                    <label>
+                                        <input class="uk-checkbox" type="checkbox"> B</label>
+                                </div> -->
+
+                                <div class="uk-margin">
+                                        <button class="uk-button uk-button-default">SUBMIT</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
                 </div>
-                <div class="uk-panel uk-margin-medium">
-                    <h2>My Career</h2>
-                    <p>
-                        <a href="http://nuvolaresume.azurewebsites.net/Resumes/Details?guid=7e13b83a-0d4e-4653-8706-87886bdfbc8d" target="_blank">
-                            <img src="../images/nuvolaresumeicon.png" width="35" alt="NuvolaResume" /> NuvolaResume as Director of Architecture or IT Director</a>
-                    </p>
-                </div>
+
             </div>
         </div>
         <% include partials/footer %>

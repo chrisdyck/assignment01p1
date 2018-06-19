@@ -1,0 +1,25 @@
+<!--
+  Contact.ejs
+  Author: Chris Dyck
+  Website: My Portfolio
+  File Description: Displays my contact information
+-->
+
+<% include partials/header %>
+
+    <div class="uk-container">
+        <h1>
+            <%= title %>
+        </h1>
+        <div class="uk-child-width-1-2@m uk-grid-match uk-grid" uk-grid="">
+            <div>
+                <div class="uk-panel">
+                    <h2>Thank you, <%= Model.response.name %>!</h2>
+                    <p>
+                        I have sent an email to <%= Model.response.email %>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <% include partials/footer %>
