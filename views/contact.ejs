@@ -1,53 +1,31 @@
 <% include partials/header %>
 
-    <body>
-        <% include partials/navbar %>
-
-            <div class="uk-container">
-                <h1>
-                    <%= title %>
-                </h1>
-                <div class="uk-child-width-1-2@m uk-grid-match uk-grid" uk-grid="">
-                    <div class="uk-first-column">
-                        <div class="uk-panel">
-                            <h2>My Family</h2>
-                            <p>
-                                <img class="uk-border-circle" src="../images/family.jpg" />
-                            </p>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="uk-panel">
-                            <h2>Find me here!</h2>
-                            <ul class="uk-subnav">
-                                <li>
-                                    <a href="https://www.facebook.com/chris.g.dyck" title="Facebook" target="_blank">
-                                        <i class="fab fa-facebook-f fa-3x"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UCq7JBrjXII9H-vRfh93cpHg" title="Youtube" target="_blank">
-                                        <i class="fab fa-youtube fa-3x"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/chrisgdyck" title="LinkedIn" target="_blank">
-                                        <i class="fab fa-linkedin fa-3x"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                        <a href="https://twitter.com/chris_dyck" title="Twitter" target="_blank">
-                                            <i class="fab fa-twitter fa-3x"></i>
-                                        </a>
-                                    </li>
-                            </ul>
-                        </div>
-                        <div class="uk-panel uk-margin-medium">
-                            <h2>My Career</h2>
-                            <p><a href="http://nuvolaresume.azurewebsites.net/Resumes/Details?guid=7e13b83a-0d4e-4653-8706-87886bdfbc8d"><img src="../images/nuvolaresumeicon.png" width="35" alt="NuvolaResume"/> NuvolaResume as Director of Architecture or IT Director</a></p>
-                        </div>
-                    </div>
+    <div class="uk-container">
+        <h1>
+            <%= title %>
+        </h1>
+        <div class="uk-child-width-1-2@m uk-grid-match uk-grid" uk-grid="">
+            <div class="uk-first-column">
+                <div class="uk-panel">
+                    <h2>My Family</h2>
+                    <p>
+                        <img class="uk-border-circle" src="../images/family.jpg" />
+                    </p>
                 </div>
-    </body>
+            </div>
+            <div class="">
+                <div class="uk-panel">
+                    <h2>Find me here!</h2>
+                    <% include partials/socialicons %>
 
-    </html>
+                </div>
+                <div class="uk-panel uk-margin-medium">
+                    <h2>My Career</h2>
+                    <p>
+                        <a href="http://nuvolaresume.azurewebsites.net/Resumes/Details?guid=7e13b83a-0d4e-4653-8706-87886bdfbc8d" target="_blank">
+                            <img src="../images/nuvolaresumeicon.png" width="35" alt="NuvolaResume" /> NuvolaResume as Director of Architecture or IT Director</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <% include partials/footer %>

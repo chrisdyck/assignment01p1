@@ -1,21 +1,16 @@
 <% include ../partials/header %>
 
-    <body>
-        <% include ../partials/navbar %>
+        <h1>
+            <%= Model.FamilyMember.Name %>
+        </h1>
+        <h3 class="uk-card-title">About
+            <%= Model.FamilyMember.Name %>,
+                <%= Model.FamilyMember.Relationship %>
+        </h3>
+        <p>
+        </p>
+        <p>
+            <%= Model.FamilyMember.Description %>
+        </p>
 
-            <div class="uk-container">
-                <h1>
-                    <%= Model.FamilyMember.Name %>
-                </h1>
-                <h3 class="uk-card-title">About
-                    <%= Model.FamilyMember.Name %>, <%= Model.FamilyMember.Relationship %>
-                </h3>
-                <p>
-                </p>
-                <p>
-                    <%= Model.FamilyMember.Description %>
-                </p>
-            </div>
-    </body>
-
-    </html>
+    <% include ../partials/footer %>

@@ -2,8 +2,11 @@
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active">
-                <a href="#">Active</a>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
             </li>
             <% if(Model.FamilyMembers != null){ %>
                 <li>
@@ -16,7 +19,7 @@
                                     <% for(var i = 0; i < data.length; i++) { %>
                                         <% if(data[i].Name != 'Not Found'){%>
                                             <li>
-                                                <a href="/family?name=<%=data[i].Name %>">
+                                                <a href="/family/<%=data[i].Name %>">
                                                     <%= data[i].Name + " (" + data[i].Relationship + ")" %>
                                                 </a>
                                             </li>
@@ -28,9 +31,7 @@
                             </div>
                 </li>
                 <% } %>
-                    <li>
-                        <a href="#">Item</a>
-                    </li>
+
         </ul>
 
     </div>

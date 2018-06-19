@@ -10,8 +10,6 @@ var router = express.Router();
 // });
 
 router.get('/', indexController.index);
-router.get('/index', indexController.index);
-router.get('/index/contact', indexController.contact);
 router.get('/contact', indexController.contact);
 
 

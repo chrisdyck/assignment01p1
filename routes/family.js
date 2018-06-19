@@ -4,8 +4,8 @@ const familyController = require('../controllers/familyController');
 
 var router = express.Router();
 
-router.get('/family', familyController.index);
-router.get('/family/:name', familyController.detail);
+router.get('/', familyController.index);
+router.get('/:name', familyController.detail);
 
 
 module.exports = router;

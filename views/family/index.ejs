@@ -1,9 +1,5 @@
 <% include ../partials/header %>
 
-    <body>
-        <% include ../partials/navbar %>
-
-            <div class="uk-container">
                 <h1>
                     <%= title %>
                 </h1>
@@ -11,8 +7,8 @@
                     <% var data = Model.FamilyMembers; %>
                     <% for(var i = 0; i < data.length; i++) { %>
                         <% if(data[i].Name != 'Not Found'){%>
-                            <a href="/family?name=<%=data[i].Name %>">
-                                <div>
+                            <div>
+                                <a href="/family/<%= data[i].Name %>">
                                     <div class="uk-card uk-card-default uk-card-body">
                                         <h3 class="uk-card-title">
                                             <%= data[i].Name + " (" + data[i].Relationship + ")" %>
@@ -21,12 +17,9 @@
                                             <%= data[i].Description %>
                                         </p>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         <% } %>
                     <% } %>
                 </div>
-            </div>
-    </body>
-
-    </html>
+            <% include ../partials/footer %>

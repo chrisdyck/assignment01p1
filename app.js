@@ -17,14 +17,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 var indexRouter = require('./routes/index');
 var familyRouter = require('./routes/family');
-var usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
 app.use('/contact', indexRouter);
 app.use('/home', indexRouter);
-app.use('/users', usersRouter);
 app.use('/family', familyRouter);
 
 // catch 404 and forward to error handler
